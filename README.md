@@ -1,3 +1,3 @@
-## bitshares-lite
+## etil-sterahstib
 
-Simple private library for BitShares history and database APIs.
+Simple private library :)
