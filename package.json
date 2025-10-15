@@ -1,0 +1,32 @@
+{
+  "name": "bitshares-lite",
+  "version": "0.9.5",
+  "author": "Megaknight",
+  "devDependencies": {
+    "@trivago/prettier-plugin-sort-imports": "^5.2.2",
+    "@types/bun": "latest",
+    "prettier": "^3.6.2",
+    "tsup": "^8.5.0"
+  },
+  "peerDependencies": {
+    "bitsharesjs": "^6.0.3",
+    "isomorphic-ws": "^5.0.0",
+    "typescript": "^5"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "default": "./dist/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "description": "A lightweight BitShares client library",
+  "license": "MIT",
+  "scripts": {
+    "start": "bun index.ts",
+    "build": "tsup"
+  },
+  "type": "module",
+  "types": "dist/index.d.ts"
+}
