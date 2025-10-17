@@ -12,6 +12,9 @@ async function getTransactionsHistory({
   address: string;
   limit?: number;
 }): Promise<OperationHistoryObject[]> {
+  // Gets the transactions history for the provided address,
+  // available only last 100 transactions because of the blockchain's history limit.
+
   const TRANSFER_OPERATION_ID = 0;
   const FIRST_OPERATION_ID = '1.11.0';
   const LAST_OPERATION_ID = '1.11.0';

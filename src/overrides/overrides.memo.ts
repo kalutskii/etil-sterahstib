@@ -26,6 +26,7 @@ function decryptMemo(
   const formattedPrivKey = deriveMemoPrivKeyFromPassword(address, password);
   const pubKey = PublicKey.fromStringOrThrow(memo.from);
 
+  // Decrypting the memo message using the derived private key and public key
   const decryptedBuffer = Aes.decrypt_with_checksum(formattedPrivKey, pubKey, memo.nonce, memo.message);
   const decryptedString = decryptedBuffer.toString('utf8');
 
