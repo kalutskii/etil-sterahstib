@@ -97,12 +97,12 @@ export interface ParsedOperationHistory {
   id: Primitives.OperationHistoryId;
   type: number;
   operation:
-    | TransferOperation
-    | LimitOrderCreateOperation
-    | LimitOrderCancelOperation
-    | CallOrderUpdateOperation
-    | FillOrderOperation
-    | unknown;
+  | TransferOperation
+  | LimitOrderCreateOperation
+  | LimitOrderCancelOperation
+  | CallOrderUpdateOperation
+  | FillOrderOperation
+  | unknown;
   blockNum: number;
   timestamp?: Primitives.TimePointSec;
 }

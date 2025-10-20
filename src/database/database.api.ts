@@ -5,7 +5,7 @@ import type { AssetAmount } from '@/types/structures.types';
 import type { AccountObject, AnyKnownObject, DynamicGlobalPropertyObject, FullAccount } from './database.schemas';
 
 class DatabaseAPI {
-  constructor(private readonly rpc: BitsharesRPC) {}
+  constructor(private readonly rpc: BitsharesRPC) { }
 
   // get_objects
   async getObjects(ids: ObjectId[], subscribe?: boolean | null): Promise<(AnyKnownObject | null)[]> {

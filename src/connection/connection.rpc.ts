@@ -37,7 +37,7 @@ function sendAndAwaitOnce<T = any>(ws: WS, id: number, method: string, params: a
       ws.removeEventListener('close', onClose as any);
     };
 
-    // --- Event Handlers ---
+    // Event Handlers
     const onMessage = (msg: any) => {
       try {
         // Decode message data, parses JSON
@@ -87,7 +87,7 @@ class BitsharesRPC {
   constructor(
     public readonly endpointURL: URLLike, // Example: 'wss://example.com/ws'
     private readonly defaultTimeoutMs: number = 10_000 // Default timeout in milliseconds
-  ) {}
+  ) { }
 
   /**
    * One "session" over **one** WS:
@@ -135,7 +135,7 @@ class BitsharesRPC {
       // ALWAYS close the socket after the transaction is complete
       try {
         ws.close();
-      } catch {}
+      } catch { }
     }
   }
 }
